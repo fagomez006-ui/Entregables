@@ -10,28 +10,150 @@
   <!--Es el título de la Página web-->
   <title>Carrito de compras - MrNandoSupply</title>
   <!--Enlaza con la hoja de estilos-->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
     </head>
-<body class="body">
-<header class="header">
+<body class="body5r">
+
+<!-- Encabezado -->
+<header class="site-header">
     <div class="container header-inner">
-          <a class="logo" href="#">
-
-            <!-- Imagen utilizada como logo -->
-            <img src=""/>
-
-
-        </a>
-        <a href="#" class="brand-name-link">
-    <span data-template-id="brand-name" class="canva-text title-font text-lg font-bold" style="color: rgb(63, 48, 42); font-weight: 700; font-style: normal; font-size: 16px;">MrNandoSupply</span> </a>
+         <a href="#inicio" class="logo">
+        <span class="logo-icon">♥</span>
+        MrNandoSupply
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Shop</a></li>
+          <li><a href="#beneficios">Productos</a></li>
+          <li><a href="#oferta">Ofertas</a></li>
+          <li><a href="#contacto">Envíos</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+          <i data-lucide="message-circle"></i> Pedir ahora
+        </button>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
     </div>
-       
 
 
+    <nav id="mobile-menu" class="mobile-nav"></nav>
+     <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Shop</a></li>
+      <li><a href="#beneficios">Productos</a></li>
+      <li><a href="#oferta">Ofertas</a></li>
+      <li><a href="#contacto">Envíos</a></li>
+    </ul>
+     <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+      <i data-lucide="message-circle"></i> Pedir ahora
+      </button>
+    </nav>
 </header>
+
+<main>
+    <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Detalles que hacen sonreír</p>
+          <h1>Tu negocio merece estar en Internet</h1>
+          <p class="lead">Promociona tus productos, recibe pedidos y haz que tus clientes te encuentren desde cualquier lugar.</p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver productos</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi su página y me gustaría conocer sus regalos personalizados.')">Comprar por WhatsApp</button>
+          </div>
+          <p class="trust"><i data-lucide="heart"></i> Más de 200 detalles entregados</p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/logo 1.png" alt="Caja de regalo artesanal con velas aromáticas, flores secas y empaque cálido.">
+          <span class="tag tag-love">Hecho con cariño</span>
+          <span class="tag tag-custom">Pedidos personalizados</span>
+        </div>
+      </div>
+    </section>
+
+ <!-- ================= PRODUCTOS ================= -->
+
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"> Del streetwear a tu casa</p>
+          <h2>Conoce nuestros productos</h2>
+          <p class="lead">Piezas unicas y diferentes.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/1.avif" alt="Caja de regalo rosa con listón y chocolates gourmet.">
+            <div class="product-body">
+              <span class="tag">White T</span>
+              <h3>Talla Personalizada</h3>
+        
+              <p class="price">$2500 MXN</p>
+              <p class="description">Basic Fit</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/2.avif" alt="Velas artesanales en frascos de vidrio ámbar.">
+            <div class="product-body">
+              <span class="tag">Black baggy jean</span>
+              <h3>Talla Personalizada</h3>
+              <p class="price">$2999 MXN</p>
+              <p class="description">A simple black baggy jean.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/3.avif" alt="Taza floral personalizada para regalo.">
+            <div class="product-body">
+              <span class="tag">Straight jean</span>
+              <h3>Talla Personalizada</h3>
+              <p class="price">$2899 MXN</p>
+              <p class="description">Black straight jean co estampados.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="https://images.pexels.com/photos/2337804/pexels-photo-2337804.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Suculentas decorativas envueltas para regalo.">
+            <div class="product-body">
+              <span class="tag">Vida verde</span>
+              <h3>Mini Jardín</h3>
+              <p class="price">$279 MXN</p>
+              <p class="description">Suculenta, maceta decorada y un detalle verde que dura.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="https://images.pexels.com/photos/7487417/pexels-photo-7487417.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Regalos y postres coloridos para celebración de cumpleaños.">
+            <div class="product-body">
+              <span class="tag">Para celebrar</span>
+              <h3>Kit Cumpleaños</h3>
+              <p class="price">$429 MXN</p>
+              <p class="description">Todo listo para celebrar con dulzura, color y personalidad.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="https://images.pexels.com/photos/32589610/pexels-photo-32589610.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tarjetas elegantes decoradas con flores secas y lavanda.">
+            <div class="product-body">
+              <span class="tag">Pequeño gran detalle</span>
+              <h3>Tarjeta con Flores</h3>
+              <p class="price">$159 MXN</p>
+              <p class="description">Un mensaje especial acompañado de flores secas y mucho encanto.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+</main>
+<script src="js/script.js"></script>
 
 </body>
 </html>
